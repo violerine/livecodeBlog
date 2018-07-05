@@ -14,6 +14,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 mongoose.connect("mongodb://127.0.0.1:27017/bloglivecode", { useNewUrlParser: true })
 // view engine setup
+app.use(cors())
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

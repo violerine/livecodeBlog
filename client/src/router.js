@@ -3,6 +3,10 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Login from './views/Login.vue'
+import Register from './views/Register.vue'
+import Profile from './views/Profile.vue'
+import Author from './views/Author.vue'
+import Category from  './views/Category'
 
 Vue.use(Router)
 
@@ -22,6 +26,27 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
-    }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile
+    },
+    {
+      path: '/author/:authorname',
+      name: 'author',
+      component: Author
+    },
+    {
+      path: '/category/:category',
+      name: 'category',
+      component: Category
+    },
+
   ]
 })

@@ -24,8 +24,8 @@ router.get('/',getAllArticle)
 //     link:req.file.cloudStoragePublicUrl
 //   }) 
 // })
-router.get('/:author',getArticleByAuthor)
-router.get('/:category',getArticleByCategory)
+router.get('/author/:author',getArticleByAuthor)
+router.get('/category/:category',getArticleByCategory)
 router.get('/:userid',getArticleByUserId)
 
 router.post('/add',authenticate,images.multer.single('image'),images.sendUploadToGCS,addNewArticle)

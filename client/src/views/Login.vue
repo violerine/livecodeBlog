@@ -39,18 +39,16 @@
                                 </div>
                             </div>
 
-                            <button type="button" @click="login" class="button is-block is-link is-large is-fullwidth">Login</button>
+                            <button type="button" @click="login" class="button is-block is-warning is-large is-fullwidth">Login</button>
                             
                         </form>
                         <br>
                         <a><router-link to="/register">Don't Have an Account? Register Here</router-link></a>
                     </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 </template>
 
@@ -59,14 +57,11 @@
 <script>
 
 import Navbar from '@/components/Navbar.vue'
-import {mapActions, mapState} from 'vuex'
+
 
 export default {
     components:{
         Navbar
-    },
-    created:function(){
-
     },
     data: function () {
         return {
@@ -76,7 +71,7 @@ export default {
     }, 
     methods: {
         login(){
-                axios.post('https://blogserver.gladysefirina.website/login',{
+                axios.post('http://localhost:8000/login',{
                     username :this.username,
                     password :this.password 
                 })

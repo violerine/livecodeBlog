@@ -28,7 +28,7 @@ module.exports={
     },
 
     getArticleByCategory:(req,res,next)=>{
-        Article.find({author:req.params.category})
+        Article.find({category:req.params.category})
         .then(articles=>{
             res.status(200).json(articles)
         })
